@@ -31,8 +31,8 @@ jobs:
         run: npm run build
       - name: Commit changes (if needed)
           run: |
-            git add .
-            git commit -m v$(node -p "require('./package.json').version")
+            git add package.json package-lock.json
+            git commit -m 'Update package.json and package-lock.json'
             git push origin main
       - name: Publish to npm
         run: npm publish
