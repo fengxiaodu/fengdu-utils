@@ -27,7 +27,7 @@ jobs:
         run: npm version patch # 自动更新版本号
       - name: Commit changes (if needed)
         run: |
-          git add package.json package-lock.json
+          git add .
           git commit -m "Bump version" || echo "No changes to commit"
           git push origin main
       - name: npm install
