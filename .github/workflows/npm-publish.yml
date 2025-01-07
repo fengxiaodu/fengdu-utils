@@ -19,20 +19,10 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
-      - name: Set up Git user
-        run: |
-          git config --global user.name "fengxiaodu"
-          git config --global user.email "1043167113@qq.com"
-          
-      - name: Install dependencies
-        run: npm install
-
-      - name: Clean untracked files
-        run: git clean -fd
-      - name: Check git status
-        run: git status
       - name: Bump version (optional)
         run: npm version patch # 自动更新版本号
+      - name: Rollup build
+        run: npm run build
       - name: Check git status
         run: git status
       - name: Publish to npm
