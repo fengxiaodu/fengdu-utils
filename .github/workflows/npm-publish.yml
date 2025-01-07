@@ -29,8 +29,11 @@ jobs:
         run: npm install
       - name: Rollup build
         run: npm run build
-      - name: Check git status
-        run: git status
+      - name: Commit changes (if needed)
+          run: |
+            git add .
+            git commit -m "Bump v$(node -p \"require('./package.json').version\")" 
+            git push origin main
       - name: Publish to npm
         run: npm publish
         env:
