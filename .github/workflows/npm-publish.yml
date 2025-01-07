@@ -31,7 +31,8 @@ jobs:
         run: npm run build
       - name: Commit changes (if needed)
           run: |
-            git add .
+            git add package.json package-lock.json
+
             git commit -m "Bump version to $(node -p \"require('./package.json').version\")" || echo "No changes to commit"
 
             git push origin main
