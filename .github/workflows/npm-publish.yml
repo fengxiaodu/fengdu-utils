@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Bump version (optional)
-        run: npm version patch # 自动更新版本号
+        run: npm version patch --no-git-tag-version # 自动更新版本号
 
       - name: Publish to npm
         run: npm publish
