@@ -1,0 +1,1 @@
+function t(t=[]){return t.sort((()=>Math.random()-.5))}function e(t,e=null){let n={},r=t.split("?")[1];if(r){r.split("&").forEach((t=>{let[e,r]=t.split("=");n[decodeURIComponent(e)]=decodeURIComponent(r)}))}return e?n[e]||null:n}var n={randomArray:t,getQueryParams:e};export{n as default,e as getQueryParams,t as randomArray};
