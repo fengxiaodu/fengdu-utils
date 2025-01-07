@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Clean untracked files
+        run: git clean -fd
+
       - name: Bump version (optional)
         run: npm version patch # 自动更新版本号
 
