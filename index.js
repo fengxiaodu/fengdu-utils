@@ -2,13 +2,14 @@
  * @Author: Wanko
  * @Date: 2024-12-23 18:03:22
  * @LastEditors: Wanko
- * @LastEditTime: 2024-12-31 12:42:40
+ * @LastEditTime: 2025-01-07 10:31:09
  * @Description: 
  */
-import { randomArray, getQueryParams } from './lib/index.js'
-export { randomArray, getQueryParams }
+import { randomArray, getQueryParams, unique } from './lib/index.js'
+export { randomArray, getQueryParams, unique }
 
 export default {
   randomArray,
-  getQueryParams
+  getQueryParams,
+  unique
 }
