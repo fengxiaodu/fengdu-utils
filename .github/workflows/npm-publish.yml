@@ -32,7 +32,7 @@ jobs:
       - name: Commit changes (if needed)
           run: |
             git add .
-            git commit -m 'Bump v$(node -p "require(\"./package.json\").version")'
+            git commit -m v$(node -p "require('./package.json').version")
             git push origin main
       - name: Publish to npm
         run: npm publish
